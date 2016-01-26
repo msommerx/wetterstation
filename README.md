@@ -1,10 +1,17 @@
 # wetterstation
 
-# Boot
-Eintrag für start.sh in etc/rc.local hinzufügen
+# boot
+Eintrag für start.sh in etc/rc.local hinzufügen.
 ```
 sudo chmod 755 start.sh
 ```
+
+# info
+```
+dmesg 
+```
+zeigt verbundene USB Geräte an.
+
 # credits
 credits to wooga/office_weather
 
