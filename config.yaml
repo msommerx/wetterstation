@@ -1,0 +1,11 @@
+prefix: office.floor2.a208
+user: email@librato.de
+token: sometoken
+
+slack:
+    webhook: 'https://hooks.slack.com/services/TXXXXXX/XXXXXX/xxxxxxx'
+    channel: '#general'
+    botname: 'CO2bot'
+    icon: ':monkey_face:'
+    upper_threshold: 800
+    lower_threshold: 600
