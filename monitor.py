@@ -8,6 +8,16 @@ import os, sys, fcntl, time, librato, yaml, socket
 
 import requests
 
+#Import smbus und Konfiguration auf Kanal 1 mit Adresse 38
+import smbus
+
+bus = smbus.SMBus(1)
+
+addr = 0x38
+
+#Einstellen des Maximalstroms, 63 dez = Maximalstrufe
+bus.write_byte_data(addr, 63, 0xff)
+
 def callback_function(error, result):
     if error:
         print(error)
@@ -141,6 +151,7 @@ if __name__ == "__main__":
                     continue
 
                 print "CO2: %4i TMP: %3.1f" % (co2, tmp)
+                print rthex
                 if now() - stamp > 5:
                     print ">>>"
                     publish(client, config["prefix"], co2, tmp)
@@ -158,3 +169,30 @@ if __name__ == "__main__":
                             notified = False
 
                     stamp = now()
+
+                rt = 40     # Alle PWM Ausgangswerte auf 0 gesetzt
+                ge = 96
+                gn = -128
+
+                if co2 < 511:
+                   bus.write_byte_data(addr, 64, 0xff) #rt 0
+                   bus.write_byte_data(addr, 96, 0xff) #ge 0
+                   bus.write_byte_data(addr, -97, 0xff) #gn 1
+                if (co2 > 512) and (co2 < 1009):
+                   bus.write_byte_data(addr, 64, 0xff) #rt 0
+                   ge = 28 + co2/16
+                   gn = 191 - co2/16
+                   bus.write_byte_data(addr, ge, 0xff)
+                   bus.write_byte_data(addr, gn, 0xff)
+                if co2 > 1010 and co2 < 2032:
+                   bus.write_byte_data(addr, -128, 0xff) #gn 0
+                   rt = 31 + co2/32
+                   ge = 160 - co2/32
+                   bus.write_byte_data(addr, ge, 0xff)
+                   bus.write_byte_data(addr, rt, 0xff)
+                if co2 > 2033:
+                   bus.write_byte_data(addr, 95, 0xff) #rt 1
+                   bus.write_byte_data(addr, 96, 0xff) #ge 0
+                   bus.write_byte_data(addr, -128, 0xff) #gn 0
+
+                print "rt: %s ,ge: %s ,gn: %s" % (rt, ge, gn)
