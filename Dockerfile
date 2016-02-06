@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:wheezy-2015-01-15
+FROM resin/raspberrypi2-buildpack-deps:wheezy
 
 RUN apt-get update && apt-get install -y python-pip python-dev i2c-tools python-smbus libi2c-dev
 
@@ -8,4 +8,4 @@ RUN pip install requests
 
 
 COPY . /app
-CMD ["bash", "/app/start.sh"]
+CMD ["sudo bash", "/app/start.sh"]
