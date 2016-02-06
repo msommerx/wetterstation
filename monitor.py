@@ -87,7 +87,7 @@ def publish(client, prefix, co2, tmp):
     except:
         print "Unexpected error:", sys.exc_info()[0]
 
-def config(config_file=/app/config.yaml):
+def config(config_file='/app/config.yaml'):
     """Get config from file; if no config_file is passed in as argument
         default to "config.yaml" in script dir"""
 
