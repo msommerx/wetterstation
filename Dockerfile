@@ -1,4 +1,4 @@
-FROM resin/hsrm-1
+FROM resin/WetterstationHSRM 
 
 RUN apt-get update && sudo apt-get install python-pip python-dev libyaml-dev python-smbus
 sudo pip install librato-metrics
