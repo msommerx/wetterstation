@@ -151,7 +151,7 @@ if __name__ == "__main__":
                     continue
 
                 print "CO2: %4i TMP: %3.1f" % (co2, tmp)
-                print rthex
+                
                 if now() - stamp > 5:
                     print ">>>"
                     publish(client, config["prefix"], co2, tmp)
