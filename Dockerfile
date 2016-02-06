@@ -8,5 +8,5 @@ RUN pip install requests
 
 
 COPY . /app
-CMD ["sudo", "chmod 755 start.sh"]
-CMD ["sudo", "bash /app/start.sh"]
+CMD ["chmod", "755", "start.sh"]
+CMD ["bash", "/app/start.sh"]
