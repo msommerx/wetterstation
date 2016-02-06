@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:wheezy-2015-05-05
+FROM resin/rpi-raspbian:wheezy-2015-01-15
 
 RUN apt-get update && sudo apt-get install python-pip python-dev libyaml-dev python-smbus
 sudo pip install librato-metrics
