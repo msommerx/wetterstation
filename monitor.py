@@ -87,13 +87,14 @@ def publish(client, prefix, co2, tmp):
     except:
         print "Unexpected error:", sys.exc_info()[0]
 
-def config(config_file=None):
+def config(config_file=/app/config.yaml):
     """Get config from file; if no config_file is passed in as argument
         default to "config.yaml" in script dir"""
 
-    if config_file is None:
-        script_base_dir = os.path.dirname(os.path.realpath(sys.argv[0])) + "/"
-        config_file = script_base_dir + "config.yaml"
+#    if config_file is None:
+#        script_base_dir = os.path.dirname(os.path.realpath(sys.argv[0])) + "/"
+#        config_file = script_base_dir + "config.yaml"
+
 
     with open(config_file, 'r') as stream:
         return yaml.load(stream)
@@ -151,7 +152,7 @@ if __name__ == "__main__":
                     continue
 
                 print "CO2: %4i TMP: %3.1f" % (co2, tmp)
-                
+
                 if now() - stamp > 5:
                     print ">>>"
                     publish(client, config["prefix"], co2, tmp)
