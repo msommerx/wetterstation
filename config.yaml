@@ -1,10 +1,10 @@
-user: email@librato.de
-token: sometoken
+user: martin.sommer@hs-rm.de
+token: 19334c9d801f5973749243ef8d27912bedb81d7105ab82c3e652d9596d1cc7ac
 
-slack:
-    webhook: 'https://hooks.slack.com/services/TXXXXXX/XXXXXX/xxxxxxx'
-    channel: '#general'
-    botname: 'CO2bot'
-    icon: ':monkey_face:'
-    upper_threshold: 1000
-    lower_threshold: 600
+#slack:
+#    webhook: 'https://hooks.slack.com/services/TXXXXXX/XXXXXX/xxxxxxx'
+#    channel: '#general'
+#    botname: 'CO2bot'
+#    icon: ':monkey_face:'
+#    upper_threshold: 1000
+#    lower_threshold: 600
