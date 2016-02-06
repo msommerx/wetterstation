@@ -8,4 +8,4 @@ RUN pip install requests
 
 
 COPY . /app
-CMD ["bash", "sudo /app/start.sh"]
+CMD ["bash", "/app/start.sh"]
