@@ -11,9 +11,6 @@ import requests
 #Import smbus und Konfiguration auf Kanal 1 mit Adresse 38
 import smbus
 
-dmesg
-sudo modprobe i2c-dev
-
 bus = smbus.SMBus(1)
 
 addr = 0x38
