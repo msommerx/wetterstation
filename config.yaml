@@ -2,10 +2,10 @@ user: martin.sommer@hs-rm.de
 token: 19334c9d801f5973749243ef8d27912bedb81d7105ab82c3e652d9596d1cc7ac
 prefix: office.floor2.a208
 
-#slack:
-#    webhook: 'https://hooks.slack.com/services/TXXXXXX/XXXXXX/xxxxxxx'
-#    channel: '#general'
-#    botname: 'CO2bot'
-#    icon: ':monkey_face:'
-#    upper_threshold: 1000
-#    lower_threshold: 600
+slack:
+    webhook: 'https://hooks.slack.com/services/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'
+    channel: '#wetter'
+    botname: 'CO2bot'
+    icon: ':monkey_face:'
+    upper_threshold: 1200
+    lower_threshold: 600
