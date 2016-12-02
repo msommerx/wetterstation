@@ -9,3 +9,4 @@ slack:
     icon: ':monkey_face:'
     upper_threshold: 1200
     lower_threshold: 600
+    
