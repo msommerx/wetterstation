@@ -6,7 +6,6 @@ RUN pip install librato-metrics
 RUN pip install pyyaml
 RUN pip install requests
 
-
 COPY . /app
 CMD ["chmod", "755", "start.sh"]
 CMD ["bash", "/app/start.sh"]
