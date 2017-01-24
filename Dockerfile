@@ -1,4 +1,4 @@
-FROM resin/raspberrypi2-buildpack-deps:wheezy
+FROM resin/rpi-raspbian:wheezy
 
 RUN sudo apt-get update
 RUN sudo apt-get install -y python-pip python-dev i2c-tools python-smbus libi2c-dev
