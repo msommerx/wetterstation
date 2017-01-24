@@ -8,5 +8,5 @@ RUN sudo pip install pyyaml
 RUN sudo pip install requests
 
 COPY . /app
-CMD ["chmod", "755", "start.sh"]
-CMD ["bash", "/app/start.sh"]
+#CMD ["chmod", "755", "start.sh"]
+#CMD ["bash", "/app/start.sh"]
