@@ -7,6 +7,6 @@ RUN sudo pip install librato-metrics
 RUN sudo pip install pyyaml
 RUN sudo pip install requests
 
-COPY . /app
+#COPY . /app
 #CMD ["chmod", "755", "start.sh"]
 #CMD ["bash", "/app/start.sh"]
