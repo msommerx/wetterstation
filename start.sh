@@ -4,4 +4,4 @@ sudo i2cdetect -y 1
 sudo lsmod
 sudo lsusb
 sudo chmod a+rw /dev/hidraw0
-#python /app/monitor.py /dev/hidraw0
+python /app/monitor.py /dev/hidraw0
