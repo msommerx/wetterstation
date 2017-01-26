@@ -1,5 +1,5 @@
 #!/bin/bash
-#sudo modprobe i2c-dev
+sudo modprobe i2c-dev
 #sudo i2cdetect -y 1
 #sudo lsmod
 #sudo chmod a+rw /dev/hidraw0
