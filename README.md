@@ -5,18 +5,15 @@ Abgerufen werden können die Daten hier [https://metrics.librato.com/s/public/dg
 
 # hardware
 [TFA Dostmann CO2-Messgerät AirCO2ntrol] (http://tfa-dostmann.de/index.php?id=83)
+Raspberry Pi 2 B
 
-# boot
-Eintrag für start.sh in etc/rc.local hinzufügen.
-```
-sudo chmod 755 start.sh
-```
+# software
+Die Software wird über resin.io installiert. Ein Account und Image muss vorhanden sein bzw. erstellt werden.
+Mit der Installation wird ein Dockerfile abgearbeitet. Dieses installiert zunächst ein Raspberry Pi buildpack installiert.
+Zusätzlich noch ein paar weitere Tools, die benötigt werden.
+Die Dateien werden in das Verzeichnis /app kopiert und das start.sh Script gestartet.
 
-# info
-```
-dmesg 
-```
-zeigt verbundene USB Geräte an.
+Das start.sh Script startet alle benötigten Dienste und die eigentliche Python App zum Erfassen und Verarbeiten der Daten.
 
 # credits
 credits to wooga/office_weather
