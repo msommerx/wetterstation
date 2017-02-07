@@ -1,9 +1,9 @@
-user: martin.sommer@hs-rm.de
-token: 19334c9d801f5973749243ef8d27912bedb81d7105ab82c3e652d9596d1cc7ac
+user: xxx
+token: xxx
 prefix: office.floor2.a208
 
 slack:
-    webhook: 'https://hooks.slack.com/services/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'
+    webhook: 'https://hooks.slack.com/services/xxx'
     channel: '#wetter'
     botname: 'CO2bot'
     icon: ':monkey_face:'
